@@ -1,0 +1,20 @@
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+    - stable
+    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
+env:
+  - MASTER_LATEST_TAG="latest"
+
+before_script:
+  - docker --version
+
+script: 
+  - bash scripts/docker-build.sh
+  - bash scripts/docker-push.sh
