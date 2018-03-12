@@ -7,7 +7,7 @@ branches:
   only:
     - master
     - stable
-    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+    - /^v?\d+\.\d+(\.\d+)?(-\S*)?$/
 
 env:
   - MASTER_LATEST_TAG="latest"
