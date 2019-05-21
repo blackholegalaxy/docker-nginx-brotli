@@ -1,8 +1,8 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com> - Modified by: blackholegalaxy"
 
-ENV NGINX_VERSION 1.14.2
+ENV NGINX_VERSION 1.16.0
 ENV NGINX_BROTLI_REPOSITORY https://github.com/eustas/ngx_brotli.git
 ENV NGINX_BROTLI_COMMIT 8104036af9cff4b1d34f22d00ba857e2a93a243c 
 
