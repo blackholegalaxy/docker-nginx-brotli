@@ -1,10 +1,10 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com> - Modified by: blackholegalaxy"
 
-ENV NGINX_VERSION 1.16.0
+ENV NGINX_VERSION 1.16.1
 ENV NGINX_BROTLI_REPOSITORY https://github.com/eustas/ngx_brotli.git
-ENV NGINX_BROTLI_COMMIT 8104036af9cff4b1d34f22d00ba857e2a93a243c 
+ENV NGINX_BROTLI_COMMIT 0e58b80a317709a9956316180eb48c3ec56c1d59 
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	&& CONFIG="\
@@ -51,6 +51,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 		--with-compat \
 		--with-file-aio \
 		--with-http_v2_module \
+		--with-http_auth_request_module \
     --add-module=/usr/src/ngx_brotli \
 	" \
 	&& addgroup -S nginx \
