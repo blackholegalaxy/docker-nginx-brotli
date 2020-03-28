@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
+docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_TOKEN"
 
 if [ "$TRAVIS_BRANCH" = "master" ]; then 
     docker push "$DOCKERHUB_REGISTRY:$MASTER_LATEST_TAG"

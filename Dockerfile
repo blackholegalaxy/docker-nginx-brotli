@@ -2,9 +2,9 @@ FROM alpine:3.10
 
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com> - Modified by: blackholegalaxy"
 
-ENV NGINX_VERSION 1.17.8
+ENV NGINX_VERSION 1.17.9
 ENV NGINX_BROTLI_REPOSITORY https://github.com/google/ngx_brotli.git
-ENV NGINX_BROTLI_COMMIT e505dce68acc190cc5a1e780a3b0275e39f160ca
+ENV NGINX_BROTLI_COMMIT 0fdca2565dbedb88101ca19b1fb1511272f0821f
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	&& CONFIG="\
